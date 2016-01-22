@@ -17,3 +17,59 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs > li {
+  display: inline-block;
+}
+
+.tabs a {
+  display: inline-block;
+  color: #000;
+  border: 3px solid grey;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  border-radius: 10px;
+  transition: all 500ms linear;
+  position: relative;
+}
+
+.tabs a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.badge {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  top: -5px;
+  left: calc(50% - 5px);
+  transform: rotate(45deg);
+  animation: pulse 1s linear infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: .2;
+    transform: scale(0.7) rotate(45deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+.panel {
+  display: none;
+}
+
+.panel:target {
+  display: block;
+}
